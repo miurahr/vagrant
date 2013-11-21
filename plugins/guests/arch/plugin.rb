@@ -20,6 +20,11 @@ module VagrantPlugins
         require_relative "cap/configure_networks"
         Cap::ConfigureNetworks
       end
+
+      guest_capability("arch", "halt") do
+        require_relative "cap/halt"
+        Cap::Halt
+      end
     end
   end
 end
